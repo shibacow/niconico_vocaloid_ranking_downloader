@@ -1,0 +1,34 @@
+= ニコニコ動画、週刊ボーカロイドランキングから、動画をダウンロードしたのち、mp3化するソフトウェア =
+
+== install ==
+ svn co http://shibaok.net:8080/repos/General
+で、データをダウンロード
+
+EasyGuiをインストール GUI表示のため
+http://easygui.sourceforge.net/
+
+eyeD3をインストール mp3のアルバム名、フロントカバーなどを操作するため
+http://eyed3.nicfit.net/
+
+== usage ==
+=== 認証 ===
+config.iniを開いて、userに自分のIDをpasswordに自分のパスワードを入れる。
+
+=== 動画のダウンロード ===
+python nico-dl-gui.py
+で起動。
+
+rssボタンを選ぶ。
+ダウンしたいMyListを入力。
+ダウンロードが始まる。
+
+ダウンロードした動画は、sXXにたまる。
+サムネイルは、imgにたまる
+=== mp3化 ===
+python mp3coding.py
+で起動
+musicにmp3が出来上がる。
+
+ファイル名は、smvideoのIDだが、タイトル、フロントカバーは、元の曲のものである。
+
+
